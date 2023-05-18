@@ -3711,10 +3711,74 @@ img.u-pull-left {
     top         : 50%;
 }
 
+.folio-item__thumb_dash a {
+    display  : block;
+    position : relative;
+    overflow : hidden;
+    height   : 385px;
+}
+
+.folio-item__thumb_dash a::before {
+    z-index          : 1;
+    content          : "";
+    display          : block;
+    background-color : rgba(0, 0, 0, 0.5);
+    opacity          : 0;
+    visibility       : hidden;
+    position         : absolute;
+    top              : 0;
+    left             : 0;
+    right            : 0;
+    bottom           : 0;
+    width            : 100%;
+    height           : 100%;
+    transition       : all, .5s;
+}
+
+.folio-item__thumb_dash a::after {
+    z-index     : 1;
+    content     : "+";
+    text-align  : center;
+    font-family : var(--font-1);
+    font-weight : 300;
+    font-size   : 3rem;
+    color       : white;
+    display     : block;
+    height      : 3.2rem;
+    width       : 3.2rem;
+    line-height : 3.2rem;
+    margin-left : -1.6rem;
+    margin-top  : -3rem;
+    text-align  : center;
+    opacity     : 0;
+    visibility  : hidden;
+    transform   : scale(0.5);
+    transition  : all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position    : absolute;
+    left        : 50%;
+    top         : 50%;
+}
+
 .folio-item__thumb img {
     vertical-align : bottom;
     margin-bottom  : 0;
     transition     : all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.folio-item__thumb .das {
+    vertical-align : bottom;
+    margin-bottom  : 0;
+    transition     : all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    height         :385px ;
+    width          :550px ;
+}
+
+.folio-item__thumb .dasii {
+    vertical-align : bottom;
+    margin-bottom  : 0;
+    transition     : all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    height         :392px ;
+    width          :550px ;
 }
 
 /* portfolio info
